@@ -1,34 +1,426 @@
 <!DOCTYPE html>
 <html lang="es">
-<!-- Previous head content remains the same -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luis Miguel Rubio Araque - Especialista en Bases de Datos & CEO</title>
-    <meta name="description" content="Portafolio profesional de Luis Miguel Rubio Araque - Especialista en Bases de Datos con 15+ años de experiencia y CEO del Sistema de Gestión de Torneos de Dominó">
-    <meta name="keywords" content="PostgreSQL, MySQL, MongoDB, Bases de Datos, Android, Kotlin, Java, PHP, CEO, Torneos Dominó">
-    <meta name="author" content="Luis Miguel Rubio Araque">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Luis Miguel Rubio Araque - Especialista en Bases de Datos & CEO">
-    <meta property="og:description" content="15+ años de experiencia en desarrollo de software y gestión de bases de datos. CEO del Sistema de Gestión de Torneos de Dominó.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sir-d3v.github.io">
+    <title>Luis Miguel Rubio Araque - Desarrollador & Especialista en Bases de Datos</title>
+    <meta name="description" content="Portafolio profesional de Luis Miguel Rubio Araque - Desarrollador especializado en bases de datos y sistemas empresariales">
     
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- CSS -->
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="light">
-    <!-- Previous content remains the same until contact section -->
-    <!-- Only showing the modified contact section for brevity -->
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">LMR</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                <li><a href="#habilidades" class="nav-link">Competencias Técnicas</a></li>
+                <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Hola, soy</span>
+                        <span class="name">Luis Miguel Rubio</span>
+                        <span class="role">Desarrollador & Especialista en Bases de Datos</span>
+                    </h1>
+                    <p class="hero-description">
+                        Especialista en bases de datos SQL y NoSQL con más de 15 años de experiencia en desarrollo de software. 
+                        CEO del Sistema de Gestión de Torneos y Rankings de Dominó de la Asociación Tachirense de Dominó. 
+                        Experto en PostgreSQL, MySQL, MongoDB y desarrollo de aplicaciones empresariales.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contacto" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            Contáctame
+                        </a>
+                        <a href="#proyectos" class="btn btn-secondary">
+                            <i class="fas fa-code"></i>
+                            Ver Proyectos
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="profile-info">
+                            <h3>Luis Miguel Rubio</h3>
+                            <p>Database Specialist & CEO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-mi" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sobre Mí</h2>
+                <p class="section-subtitle">Conoce más sobre mi trayectoria profesional</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        Soy un desarrollador con más de 15 años de experiencia especializado en bases de datos y sistemas empresariales. 
+                        Mi trayectoria incluye desde desarrollo web hasta aplicaciones móviles Android, con un enfoque particular 
+                        en la optimización de bases de datos SQL y NoSQL. Actualmente dirijo el desarrollo del sistema de 
+                        gestión de torneos para la Asociación Tachirense de Dominó.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Años de Experiencia</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">25+</div>
+                            <div class="stat-label">Empresas Atendidas</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Satisfacción del Cliente</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-card">
+                        <div class="card-content">
+                            <i class="fas fa-code card-icon"></i>
+                            <h3>Filosofía de Desarrollo</h3>
+                            <p>Código limpio, soluciones eficientes y experiencias de usuario excepcionales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="habilidades" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Competencias Técnicas</h2>
+                <p class="section-subtitle">Tecnologías y herramientas que domino</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-laptop-code"></i>
+                        Frontend
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-level">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Svelte</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-server"></i>
+                        Backend
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PostgreSQL</span>
+                                <span class="skill-level">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MySQL</span>
+                                <span class="skill-level">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MongoDB</span>
+                                <span class="skill-level">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i>
+                        Herramientas
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PHP</span>
+                                <span class="skill-level">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Kotlin (Android)</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experiencia" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experiencia Profesional</h2>
+                <p class="section-subtitle">Mi trayectoria en el desarrollo de software</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>CEO - Sistema de Gestión de Torneos de Dominó</h3>
+                            <span class="timeline-date">2024 - Presente</span>
+                        </div>
+                        <p class="timeline-description">
+                            CEO y desarrollador principal del Sistema de Gestión de Torneos y Rankings de Dominó 
+                            para la Asociación Tachirense de Dominó. Liderazgo en el desarrollo de plataforma completa 
+                            para gestión de competencias profesionales.
+                        </p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">SvelteKit</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Liderazgo</span>
+                            <span class="skill-tag">Gestión</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Desarrollador Android - Cable Norte C.A.</h3>
+                            <span class="timeline-date">2023</span>
+                        </div>
+                        <p class="timeline-description">
+                            Desarrollo de aplicaciones móviles nativas para Android utilizando Kotlin. 
+                            Integración con bases de datos MongoDB y manejo de XML para interfaces de usuario.
+                        </p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Kotlin</span>
+                            <span class="skill-tag">Android</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">XML</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Jefe de Sistemas - Alcaldía de San Cristóbal</h3>
+                            <span class="timeline-date">2021 - 2022</span>
+                        </div>
+                        <p class="timeline-description">
+                            Jefe de la oficina de Sistemas de la cámara municipal. Administración de infraestructura 
+                            tecnológica, bases de datos PostgreSQL y desarrollo de aplicaciones Java para el sector público.
+                        </p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Administración</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Proyectos Destacados</h2>
+                <p class="section-subtitle">Algunos de mis trabajos más importantes</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sistema de Gestión de Torneos de Dominó</h3>
+                        <p class="project-description">
+                            Plataforma completa para la gestión de torneos y rankings de dominó profesional 
+                            desarrollada para la Asociación Tachirense de Dominó. Incluye registro de jugadores, 
+                            emparejamientos y cálculo de rankings.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">SvelteKit</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">TailwindCSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-info-circle"></i>
+                                Información
+                            </a>
+                            <a href="#contacto" class="project-link">
+                                <i class="fas fa-envelope"></i>
+                                Contactar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Aplicaciones Android Empresariales</h3>
+                        <p class="project-description">
+                            Desarrollo de aplicaciones móviles nativas para Android utilizando Kotlin. 
+                            Especialización en integración con bases de datos NoSQL y interfaces de usuario optimizadas.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">XML</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-info-circle"></i>
+                                Detalles
+                            </a>
+                            <a href="#contacto" class="project-link">
+                                <i class="fas fa-envelope"></i>
+                                Consultar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Optimización de Bases de Datos</h3>
+                        <p class="project-description">
+                            Especialización en diseño, administración y optimización de bases de datos SQL y NoSQL. 
+                            Experiencia en PostgreSQL, MySQL, MongoDB y DB2 para empresas de diversos sectores.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">DB2</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-chart-line"></i>
+                                Rendimiento
+                            </a>
+                            <a href="#contacto" class="project-link">
+                                <i class="fas fa-envelope"></i>
+                                Consultoría
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contacto" class="contact">
         <div class="container">
             <div class="section-header">
@@ -57,15 +449,6 @@
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Ubicación</h3>
-                            <p>San Cristóbal, Táchira, Venezuela</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
                             <i class="fab fa-linkedin"></i>
                         </div>
                         <div class="contact-details">
@@ -74,20 +457,19 @@
                         </div>
                     </div>
                 </div>
-                <!-- Contact form remains the same -->
                 <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Tu nombre" required>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Tu email" required>
+                            <input type="email" id="email" name="email" placeholder="Tu email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="subject" placeholder="Asunto" required>
+                            <input type="text" id="subject" name="subject" placeholder="Asunto" required>
                         </div>
                         <div class="form-group">
-                            <textarea name="message" placeholder="Tu mensaje" required></textarea>
+                            <textarea id="message" name="message" placeholder="Tu mensaje" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">
                             <i class="fas fa-paper-plane"></i>
@@ -103,13 +485,10 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p class="footer-text">
-                    © 2024 Luis Miguel Rubio Araque. Todos los derechos reservados.
-                </p>
+                <div class="footer-text">
+                    <p>&copy; 2024 Luis Miguel Rubio Araque. Todos los derechos reservados.</p>
+                </div>
                 <div class="footer-social">
-                    <a href="mailto:rubioluismiguel@gmail.com" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
                     <a href="https://linkedin.com/in/dev616" class="social-link" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-linkedin"></i>
                     </a>
@@ -121,7 +500,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
