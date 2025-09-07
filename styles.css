@@ -243,6 +243,7 @@ body {
 .hero-buttons {
     display: flex;
     gap: var(--spacing-md);
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -256,6 +257,7 @@ body {
     transition: all var(--transition-fast);
     border: none;
     cursor: pointer;
+    font-size: 0.95rem;
 }
 
 .btn-primary {
@@ -279,6 +281,57 @@ body {
     background: var(--primary-color);
     color: white;
     transform: translateY(-2px);
+}
+
+/* Download Button Styles */
+.btn-download {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-download::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-download:hover::before {
+    left: 100%;
+}
+
+.btn-download:hover {
+    background: linear-gradient(135deg, #059669, #047857);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+}
+
+.btn-outline-download {
+    background: transparent;
+    color: #10b981;
+    border: 2px solid #10b981;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-outline-download:hover {
+    background: #10b981;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+}
+
+/* About Actions */
+.about-actions {
+    margin-top: var(--spacing-xl);
+    display: flex;
+    justify-content: center;
 }
 
 /* Profile Card */
@@ -843,6 +896,12 @@ section:not(.hero) {
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     .name {
