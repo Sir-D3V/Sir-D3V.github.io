@@ -41,6 +41,22 @@
         </div>
     </nav>
 
+    <!-- Share Buttons -->
+    <div class="share-buttons">
+        <a href="#" class="share-btn share-whatsapp" onclick="shareOnWhatsApp()" title="Compartir en WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" class="share-btn share-linkedin" onclick="shareOnLinkedIn()" title="Compartir en LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="share-btn share-email" onclick="shareByEmail()" title="Compartir por Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="#" class="share-btn share-twitter" onclick="shareOnTwitter()" title="Compartir en Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+    </div>
+
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-container">
@@ -69,6 +85,10 @@
                             <i class="fas fa-download"></i>
                             Descargar CV
                         </a>
+                        <button class="btn btn-share" onclick="toggleShareMenu()">
+                            <i class="fas fa-share-alt"></i>
+                            Compartir
+                        </button>
                     </div>
                 </div>
                 <div class="hero-image">
