@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luis Miguel Rubio - Desarrollador & Especialista en Bases de Datos</title>
+    <title>Luis Miguel Rubio - Database Administrator & Desarrollador</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body data-theme="light">
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-brand">
             <a href="#hero">LMR</a>
@@ -29,44 +30,58 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Luis Miguel Rubio</h1>
-                <h2 class="role">Desarrollador & Especialista en Bases de Datos</h2>
+                <h2 class="role">Database Administrator & Desarrollador</h2>
+                <p class="hero-description">Especialista en bases de datos con más de 15 años de experiencia</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Contáctame</a>
                     <a href="assets/cv.pdf" class="btn btn-secondary" download>Descargar CV</a>
-                    <button onclick="toggleShareMenu()" class="btn btn-share">
-                        <i class="fas fa-share-alt"></i> Compartir
-                    </button>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="assets/profile.jpg" alt="Luis Miguel Rubio - Desarrollador & Especialista en Bases de Datos">
+                <img src="assets/profile.jpg" alt="Luis Miguel Rubio - Database Administrator">
             </div>
         </div>
     </section>
 
-    <div class="share-buttons">
-        <button onclick="shareOnWhatsApp()" class="share-btn whatsapp">
-            <i class="fab fa-whatsapp"></i>
-            <span class="tooltip">Compartir en WhatsApp</span>
-        </button>
-        <button onclick="shareOnLinkedIn()" class="share-btn linkedin">
-            <i class="fab fa-linkedin-in"></i>
-            <span class="tooltip">Compartir en LinkedIn</span>
-        </button>
-        <button onclick="shareByEmail()" class="share-btn email">
-            <i class="fas fa-envelope"></i>
-            <span class="tooltip">Compartir por Email</span>
-        </button>
-        <button onclick="shareOnTwitter()" class="share-btn twitter">
-            <i class="fab fa-twitter"></i>
-            <span class="tooltip">Compartir en Twitter</span>
-        </button>
-    </div>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Soy un desarrollador y especialista en bases de datos con más de 15 años de experiencia en el diseño, implementación y optimización de sistemas de datos empresariales.</p>
+                    <p>Mi experiencia abarca desde la arquitectura de bases de datos hasta el desarrollo de aplicaciones móviles, siempre enfocado en crear soluciones eficientes y escalables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Rest of the content remains the same -->
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>rubioluismiguel@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-telegram"></i>
+                    <span>@SirTempeh</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://linkedin.com/in/luismiguelrubio" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
