@@ -1,5 +1,6 @@
 // Theme Toggle Functionality
-const themeToggle = document.getElementById('theme-icon');
+const themeToggle = document.getElementById('theme-icon').parentElement;
+const themeIcon = document.getElementById('theme-icon');
 const body = document.body;
 
 // Check for saved theme preference or default to light mode
@@ -17,7 +18,49 @@ themeToggle.addEventListener('click', () => {
 });
 
 function updateThemeIcon(theme) {
-    themeToggle.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+}
+
+// Share Functions
+function shareOnWhatsApp() {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent('¡Mira el portafolio profesional de Luis Miguel Rubio! Especialista en bases de datos con más de 15 años de experiencia.');
+    window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
+}
+
+function shareOnLinkedIn() {
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent('Luis Miguel Rubio - Desarrollador & Especialista en Bases de Datos');
+    const summary = encodeURIComponent('Portafolio profesional de Luis Miguel Rubio Araque - Especialista en bases de datos SQL y NoSQL con más de 15 años de experiencia');
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}&summary=${summary}`, '_blank');
+}
+
+function shareByEmail() {
+    const subject = encodeURIComponent('Portafolio de Luis Miguel Rubio - Desarrollador & Especialista en Bases de Datos');
+    const body = encodeURIComponent(`Hola,
+
+Te comparto el portafolio profesional de Luis Miguel Rubio Araque, especialista en bases de datos SQL y NoSQL con más de 15 años de experiencia en desarrollo de software.
+
+Puedes ver su trabajo y experiencia en: ${window.location.href}
+
+¡Saludos!`);
+    window.location.href = `mailto:?subject=${subject}&body=${body}`;
+}
+
+function shareOnTwitter() {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent('¡Conoce el trabajo de Luis Miguel Rubio! 🚀 Especialista en bases de datos con +15 años de experiencia 💻 #Desarrollador #BaseDeDatos #PostgreSQL #MongoDB');
+    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+}
+
+function toggleShareMenu() {
+    const shareButtons = document.querySelector('.share-buttons');
+    shareButtons.style.display = shareButtons.style.display === 'none' ? 'flex' : 'none';
+    
+    // Hide after 5 seconds
+    setTimeout(() => {
+        shareButtons.style.display = 'flex';
+    }, 100);
 }
 
 // Mobile Navigation
@@ -389,3 +432,25 @@ window.addEventListener('scroll', throttle(() => {
     updateNavbarBackground();
     animateSkillBars();
 }, 16)); // ~60fps
+
+// Hide share buttons initially and show on scroll
+window.addEventListener('load', () => {
+    const shareButtons = document.querySelector('.share-buttons');
+    shareButtons.style.opacity = '0';
+    shareButtons.style.transform = 'translateX(100px)';
+    shareButtons.style.transition = 'all 0.3s ease-in-out';
+    
+    setTimeout(() => {
+        shareButtons.style.opacity = '1';
+        shareButtons.style.transform = 'translateX(0)';
+    }, 2000);
+});
+
+// Copy to clipboard functionality
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        showNotification('¡Enlace copiado al portapapeles!', 'success');
+    }).catch(() => {
+        showNotification('Error al copiar el enlace', 'error');
+    });
+}
