@@ -146,13 +146,18 @@ body {
     width: 100%;
 }
 
-/* Theme Toggle */
+/* Theme Toggle - Improved clickable area */
 .theme-toggle {
     cursor: pointer;
-    padding: var(--spacing-sm);
+    padding: var(--spacing-md);
     border-radius: 50%;
     transition: background-color var(--transition-fast);
     margin-right: var(--spacing-md);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .theme-toggle:hover {
@@ -163,6 +168,7 @@ body {
     font-size: 1.2rem;
     color: var(--text-primary);
     transition: transform var(--transition-fast);
+    pointer-events: none;
 }
 
 .theme-toggle:hover #theme-icon {
@@ -184,13 +190,15 @@ body {
     transition: all var(--transition-fast);
 }
 
-/* Hero Section */
+/* Hero Section - Fixed positioning */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
     padding-top: var(--navbar-height);
+    position: relative;
+    z-index: 1;
 }
 
 .hero-container {
@@ -198,6 +206,7 @@ body {
     margin: 0 auto;
     padding: 0 var(--spacing-lg);
     width: 100%;
+    position: relative;
 }
 
 .hero-content {
@@ -205,6 +214,8 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-3xl);
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-title {
@@ -327,6 +338,20 @@ body {
     box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
 }
 
+/* Share Button Styles */
+.btn-share {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-share:hover {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+}
+
 /* About Actions */
 .about-actions {
     margin-top: var(--spacing-xl);
@@ -373,6 +398,7 @@ body {
     bottom: var(--spacing-xl);
     left: 50%;
     transform: translateX(-50%);
+    z-index: 3;
 }
 
 .scroll-arrow {
@@ -393,14 +419,17 @@ body {
     }
 }
 
-/* Sections */
+/* Sections - Fixed z-index and positioning */
 section {
     padding: var(--spacing-3xl) 0;
     scroll-margin-top: var(--navbar-height);
+    position: relative;
+    z-index: 10;
 }
 
 section:not(.hero) {
-    padding-top: calc(var(--spacing-3xl) + 20px);
+    padding-top: calc(var(--spacing-3xl) + 40px);
+    background-color: var(--bg-primary);
 }
 
 .container {
@@ -429,6 +458,7 @@ section:not(.hero) {
 /* About Section */
 .about {
     background: var(--bg-secondary);
+    z-index: 15;
 }
 
 .about-content {
@@ -494,6 +524,53 @@ section:not(.hero) {
 .card-content p {
     color: var(--text-secondary);
     line-height: 1.6;
+}
+
+/* Share Buttons */
+.share-buttons {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.share-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all var(--transition-fast);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.share-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.share-whatsapp {
+    background: #25d366;
+}
+
+.share-linkedin {
+    background: #0077b5;
+}
+
+.share-email {
+    background: #ea4335;
+}
+
+.share-twitter {
+    background: #1da1f2;
 }
 
 /* Skills Section */
@@ -937,5 +1014,16 @@ section:not(.hero) {
         flex-direction: column;
         gap: var(--spacing-md);
         text-align: center;
+    }
+
+    .share-buttons {
+        right: 10px;
+        gap: var(--spacing-xs);
+    }
+
+    .share-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
     }
 }
