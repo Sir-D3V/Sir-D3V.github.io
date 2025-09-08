@@ -1,0 +1,72 @@
+<!-- RESPALDO DEL FORMULARIO DE CONTACTO FUNCIONAL -->
+<!-- Contact Section -->
+<section id="contacto" class="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Contacto</h2>
+            <p class="section-subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <p>rubioluismiguel@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>GitHub</h3>
+                        <p>github.com/dev616</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Teléfono</h3>
+                        <p>+58 276 344-0750</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm" action="https://formsubmit.co/rubioluismiguel@gmail.com" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_next" value="https://sir-d3v.github.io?mensaje=enviado">
+                    <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Tu email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Asunto" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Tu mensaje" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group captcha-container">
+                        <label for="captcha">Captcha: ¿Cuánto es <span id="captcha-question"></span>?</label>
+                        <input type="number" id="captcha-answer" name="captcha" placeholder="Respuesta" required>
+                        <input type="hidden" id="captcha-expected" name="captcha-expected">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
