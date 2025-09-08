@@ -798,47 +798,77 @@ section {
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: relative;
 }
 
-.social-share-icons {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    display: flex;
-    gap: 8px;
-    z-index: 10;
+.social-share-fixed {
+position: fixed;
+top: 50%;
+right: 20px;
+transform: translateY(-50%);
+display: flex;
+flex-direction: column;
+gap: 12px;
+z-index: 1000;
 }
 
-.share-icon {
-    width: 28px;
-    height: 28px;
-    background: var(--bg-primary);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    text-decoration: none;
-    cursor: pointer;
-    transition: all var(--transition-fast);
-    box-shadow: 0 2px 4px var(--shadow-light);
+.share-btn {
+width: 50px;
+height: 50px;
+border: none;
+border-radius: var(--radius-lg);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.3rem;
+color: white;
+cursor: pointer;
+transition: all var(--transition-normal);
+box-shadow: 0 4px 15px var(--shadow-medium);
 }
 
-.share-icon:hover {
-    background: var(--bg-secondary);
-    color: var(--primary-color);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px var(--shadow-medium);
+.share-btn:hover {
+transform: translateY(-3px) scale(1.05);
+box-shadow: 0 8px 25px var(--shadow-heavy);
+}
+
+.share-btn.whatsapp {
+background: #25d366;
+}
+
+.share-btn.whatsapp:hover {
+background: #1da851;
+}
+
+.share-btn.linkedin {
+background: #0077b5;
+}
+
+.share-btn.linkedin:hover {
+background: #005885;
+}
+
+.share-btn.email {
+background: #ea4335;
+}
+
+.share-btn.email:hover {
+background: #c23321;
+}
+
+.share-btn.twitter {
+background: #1da1f2;
+}
+
+.share-btn.twitter:hover {
+background: #0d8bd9;
 }
 
 .footer-text {
-    color: var(--text-secondary);
+color: var(--text-secondary);
 }
 
 .footer-social {
