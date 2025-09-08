@@ -309,14 +309,16 @@ function typeRole() {
 window.addEventListener('load', () => {
     setTimeout(typeRole, 1000);
     
-    // Update current year in footer
-    const currentYearElement = document.getElementById('current-year');
-    if (currentYearElement) {
-        currentYearElement.textContent = new Date().getFullYear();
-    }
-    
-    // Generate captcha
-    generateCaptcha();
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentYear = new Date().getFullYear();
+        const yearElement = document.getElementById('current-year');
+        if (yearElement) {
+            yearElement.textContent = currentYear;
+        }
+        
+        // Generate captcha on page load
+        generateCaptcha();
+    });
     
     // Check if returning from form submission
     const urlParams = new URLSearchParams(window.location.search);

@@ -181,7 +181,9 @@ html {
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-    padding-top: 70px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 2rem;
 }
 
 .hero-container {
@@ -360,6 +362,7 @@ section {
 /* About Section */
 .about {
     background: var(--bg-secondary);
+    padding-top: 6rem;
 }
 
 .about-content {
@@ -798,6 +801,40 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.social-share-icons {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.share-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: 0 2px 4px var(--shadow-light);
+}
+
+.share-icon:hover {
+    background: var(--bg-secondary);
+    color: var(--primary-color);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px var(--shadow-medium);
 }
 
 .footer-text {
