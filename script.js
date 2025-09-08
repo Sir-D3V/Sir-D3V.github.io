@@ -1,5 +1,5 @@
 // Theme Toggle Functionality
-const themeToggleContainer = document.getElementById('theme-toggle');
+const themeToggle = document.querySelector('.theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
 const body = document.body;
 
@@ -8,8 +8,8 @@ const currentTheme = localStorage.getItem('theme') || 'light';
 body.setAttribute('data-theme', currentTheme);
 updateThemeIcon(currentTheme);
 
-// Add click event to the container, not just the icon
-themeToggleContainer.addEventListener('click', () => {
+// Add click event to the entire toggle container for better UX
+themeToggle.addEventListener('click', () => {
     const currentTheme = body.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     
@@ -239,12 +239,12 @@ function showNotification(message, type) {
 // Typing Animation for Hero Section with Dynamic Descriptions
 const rolesData = [
     {
-        title: 'Consultor Senior & Arquitecto de Datos',
-        description: 'Arquitecto de soluciones de datos escalables que transforman información compleja en ventajas competitivas estratégicas.'
+        title: 'Especialista en SQL & NoSQL',
+        description: 'Experto en bases de datos relacionales y no relacionales, optimizando consultas complejas y arquitecturas de datos escalables.'
     },
     {
-        title: 'Especialista PostgreSQL & MySQL',
-        description: 'Experto en optimización y diseño de bases de datos relacionales para aplicaciones de alto rendimiento y escalabilidad.'
+        title: 'Desarrollador Android & Kotlin Expert',
+        description: 'Desarrollador especializado en aplicaciones móviles nativas con Kotlin, creando experiencias de usuario excepcionales.'
     },
     {
         title: 'CEO Sistema de Gestión de Torneos',

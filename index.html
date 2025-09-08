@@ -74,20 +74,6 @@
                             <i class="fas fa-download"></i>
                             Descargar Currículum
                         </a>
-                        <div class="share-buttons">
-                            <button class="share-btn whatsapp" onclick="shareOnWhatsApp()" title="Compartir en WhatsApp">
-                                <i class="fab fa-whatsapp"></i>
-                            </button>
-                            <button class="share-btn linkedin" onclick="shareOnLinkedIn()" title="Compartir en LinkedIn">
-                                <i class="fab fa-linkedin"></i>
-                            </button>
-                            <button class="share-btn email" onclick="shareByEmail()" title="Compartir por Email">
-                                <i class="fas fa-envelope"></i>
-                            </button>
-                            <button class="share-btn twitter" onclick="shareOnTwitter()" title="Compartir en Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </button>
-                        </div>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -97,10 +83,25 @@
                         </div>
                         <div class="profile-info">
                             <h3>Luis Miguel Rubio</h3>
-                            <p>CEO & Database Specialist</p>
+                            <p>Database Specialist & DBA</p>
+                            <span class="experience-badge">+15 años de experiencia</span>
                         </div>
                     </div>
-                </div>
+                    <!-- Share buttons positioned to the right -->
+                    <div class="share-buttons-right">
+                        <button class="share-btn whatsapp" onclick="shareOnWhatsApp()" title="Compartir en WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </button>
+                        <button class="share-btn linkedin" onclick="shareOnLinkedIn()" title="Compartir en LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </button>
+                        <button class="share-btn email" onclick="shareByEmail()" title="Compartir por Email">
+                            <i class="fas fa-envelope"></i>
+                        </button>
+                        <button class="share-btn twitter" onclick="shareOnTwitter()" title="Compartir en Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                    </div>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -128,8 +129,8 @@
                         para la gestión deportiva.
                     </p>
                     <p class="about-description">
-                        Mi dominio abarca desde la ingeniería de contexto y el desarrollo de MCP para IDEs inteligentes, 
-                        hasta el vibe coding y la arquitectura de sistemas escalables. Me especializo en crear soluciones 
+                        Mi dominio abarca desde la <strong>ingeniería de contexto</strong> y el desarrollo de <strong>MCP para IDEs inteligentes</strong>, 
+                        hasta el <strong>vibe coding</strong> y la arquitectura de sistemas escalables. Me especializo en crear soluciones 
                         que no solo resuelven problemas técnicos, sino que transforman la manera en que las organizaciones 
                         interactúan con sus datos.
                     </p>
@@ -437,10 +438,10 @@
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Aplicaciones Android Empresariales</h3>
+                        <h3 class="project-title">App Kotlin - Cable Norte C.A.</h3>
                         <p class="project-description">
-                            Desarrollo de aplicaciones móviles Android para empresas del sector telecomunicaciones, 
-                            con funcionalidades de gestión de clientes, facturación y reportes en tiempo real.
+                            Desarrollo de aplicación móvil Android nativa con Kotlin para Cable Norte C.A., 
+                            implementando gestión de clientes, facturación automatizada y reportes en tiempo real.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Kotlin</span>
@@ -459,19 +460,19 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-database"></i>
+                        <i class="fas fa-search"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Optimización de Bases de Datos Municipales</h3>
+                        <h3 class="project-title">Minería Digital y Análisis de Datos</h3>
                         <p class="project-description">
-                            Proyecto de optimización y reestructuración de las bases de datos de la Alcaldía de 
-                            San Cristóbal, mejorando el rendimiento en un 300% y reduciendo los tiempos de consulta.
+                            Especialización en técnicas avanzadas de minería de datos y análisis predictivo, 
+                            extrayendo insights valiosos de grandes volúmenes de información empresarial.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Machine Learning</span>
                             <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Optimización</span>
-                            <span class="tech-tag">Migración de Datos</span>
+                            <span class="tech-tag">Data Mining</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">
@@ -534,9 +535,10 @@
                 <div class="contact-form">
                     <form id="contactForm" action="https://formsubmit.co/rubioluismiguel@gmail.com" method="POST">
                         <!-- FormSubmit Configuration -->
-                        <input type="hidden" name="_next" value="https://sir-d3v.github.io">
-                        <input type="hidden" name="_subject" value="Nuevo mensaje desde el portafolio">
+                        <input type="hidden" name="_next" value="https://sir-d3v.github.io?mensaje=enviado">
+                        <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio">
                         <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
                         
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Tu nombre" required>
@@ -548,24 +550,18 @@
                             <input type="text" id="subject" name="subject" placeholder="Asunto" required>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Tu mensaje" required></textarea>
+                            <textarea id="message" name="message" placeholder="Tu mensaje" rows="5" required></textarea>
                         </div>
-                        
-                        <!-- Custom Captcha -->
-                        <div class="form-group captcha-group">
-                            <label for="captcha">Verificación: <span id="captcha-question"></span></label>
-                            <input type="number" id="captcha-answer" placeholder="Respuesta" required>
-                            <input type="hidden" id="captcha-expected" value="">
+                        <div class="form-group captcha-container">
+                            <label for="captcha">Captcha: ¿Cuánto es <span id="captcha-question"></span>?</label>
+                            <input type="number" id="captcha-answer" name="captcha" placeholder="Respuesta" required>
+                            <input type="hidden" id="captcha-expected" name="captcha-expected">
                         </div>
-                        
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary" id="submit-btn">
                             <i class="fas fa-paper-plane"></i>
                             Enviar Mensaje
                         </button>
                     </form>
-                    
-                    <!-- Notification -->
-                    <div id="notification" class="notification"></div>
                 </div>
             </div>
         </div>
@@ -576,7 +572,7 @@
         <div class="container">
             <div class="footer-content">
                 <p class="footer-text">
-                    © 2024 Luis Miguel Rubio Araque. Todos los derechos reservados.
+                    © <span id="current-year">2024</span> Luis Miguel Rubio Araque. Todos los derechos reservados.
                 </p>
                 <div class="footer-social">
                     <a href="mailto:rubioluismiguel@gmail.com" class="social-link">
