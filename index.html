@@ -532,24 +532,40 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formsubmit.co/rubioluismiguel@gmail.com" method="POST">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_next" value="https://sir-d3v.github.io">
+                        <input type="hidden" name="_subject" value="Nuevo mensaje desde el portafolio">
+                        <input type="hidden" name="_captcha" value="false">
+                        
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Tu nombre" required>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Tu email" required>
+                            <input type="email" id="email" name="email" placeholder="Tu email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="subject" placeholder="Asunto" required>
+                            <input type="text" id="subject" name="subject" placeholder="Asunto" required>
                         </div>
                         <div class="form-group">
-                            <textarea name="message" placeholder="Tu mensaje" required></textarea>
+                            <textarea id="message" name="message" placeholder="Tu mensaje" required></textarea>
                         </div>
+                        
+                        <!-- Custom Captcha -->
+                        <div class="form-group captcha-group">
+                            <label for="captcha">Verificación: <span id="captcha-question"></span></label>
+                            <input type="number" id="captcha-answer" placeholder="Respuesta" required>
+                            <input type="hidden" id="captcha-expected" value="">
+                        </div>
+                        
                         <button type="submit" class="btn btn-primary">
                             <i class="fas fa-paper-plane"></i>
                             Enviar Mensaje
                         </button>
                     </form>
+                    
+                    <!-- Notification -->
+                    <div id="notification" class="notification"></div>
                 </div>
             </div>
         </div>

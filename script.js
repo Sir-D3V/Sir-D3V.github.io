@@ -260,7 +260,7 @@ let currentRoleIndex = 0;
 let currentCharIndex = 0;
 let isDeleting = false;
 const roleElement = document.querySelector('.role');
-const descriptionElement = document.getElementById('hero-description');
+const descriptionElement = document.getElementById('dynamic-description');
 const typingSpeed = 100;
 const deletingSpeed = 50;
 const pauseTime = 2000;
@@ -461,3 +461,28 @@ window.addEventListener('scroll', throttle(() => {
     updateNavbarBackground();
     animateSkillBars();
 }, 16)); // ~60fps
+
+// Share Functions
+function shareOnWhatsApp() {
+    const text = encodeURIComponent('Conoce el portafolio de Luis Miguel Rubio - Especialista en Bases de Datos');
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
+}
+
+function shareOnLinkedIn() {
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent('Luis Miguel Rubio - Especialista en Bases de Datos');
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}`, '_blank');
+}
+
+function shareByEmail() {
+    const subject = encodeURIComponent('Portafolio de Luis Miguel Rubio');
+    const body = encodeURIComponent(`Te comparto el portafolio de Luis Miguel Rubio - Especialista en Bases de Datos: ${window.location.href}`);
+    window.location.href = `mailto:?subject=${subject}&body=${body}`;
+}
+
+function shareOnTwitter() {
+    const text = encodeURIComponent('Conoce el portafolio de Luis Miguel Rubio - Especialista en Bases de Datos');
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+}
